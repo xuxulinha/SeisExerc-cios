@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Exercício3</title>
+    </head>
+    <body>
+
+    <script language="javascript">
+
+    function exibirString()
+
+    {
+
+        var mensagem, ss, qtdeVogais, qtdeConsoantes, qtdeDigitos, qtdeOutros;
+        mensagem = document.frmDados.string.value;
+
+        qtdeVogais = 0;
+        qtdeConsoantes = 0;
+        qtdeDigitos = 0;
+        qtdeOutros = 0;
+  
+        for(ss=0; ss<mensagem.length; ++ss)
+        {
+            if (mensagem.charAt(ss).toUpperCase()=="A" || mensagem.charAt(ss).toUpperCase()=="E" ||
+            mensagem.charAt(ss).toUpperCase()=="I" || mensagem.charAt(ss).toUpperCase()=="O" ||
+            mensagem.charAt(ss).toUpperCase()=="U")
+            {
+                qtdeVogais++;
+            }
+            else
+                if (mensagem.charCodeAt(ss)>=65 && mensagem.charCodeAt(ss)<=90 || 
+                mensagem.charCodeAt(ss)>=97 && mensagem.charCodeAt(ss)<=122)
+            {
+                qtdeConsoantes++;
+            }
+            else
+                if (mensagem.charCodeAt(ss)>=48 && mensagem.charCodeAt(ss)<=57)
+            {
+                qtdeDigitos++;
+            }  
+            else
+            {
+                qtdeOutros++;
+            }
+  
+        }
+
+        document.write("<table border='1'>");
+        document.write("<tr><td>Quantidade de vogais:</td><td>" + qtdeVogais + "</td></tr>");
+        document.write("<tr><td>Quantidade de consoantes:</td><td>" + qtdeConsoantes + "</td></tr>");
+        document.write("<tr><td>Quantidade de digitos:</td><td>" + qtdeDigitos + "</td></tr>");
+        document.write("<tr><td>Quantidade de outros caracteres:</td><td>" + qtdeOutros + "</td></tr>");
+        document.write("</table>");
+    }
+
+    </script>
+
+    <form name="frmDados">
+    Escreva algo: <input type="text" name="string"><br>
+    <input type="button" value="Enviar" onclick="exibirString();">
+
+    </body>
+</html>

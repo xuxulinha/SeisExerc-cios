@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Exercício4</title>
+    </head>
+    <body>
+
+        <script language="javascript">
+
+function verificarPalíndromo()
+
+      {
+        var string, semEspacos, invertida, ss;
+        string = document.frmDados.string.value;
+
+        semEspacos = "";
+        
+        for(ss=0; ss<string.length; ++ss)
+        {
+            if (string.charAt(ss)!=" ")
+            {
+                semEspacos += string.charAt(ss);
+            }
+        }
+
+        invertida = "";
+        for(i=semEspacos.length-1; ss>=0; --ss)
+        {
+            invertida += semEspacos.charAt(ss);
+        }
+
+        document.write("<table border='1'>");
+        document.write("<tr><td>" + semEspacos + "</td></tr>");
+        document.write("<tr><td>" + invertida + "</td></tr>");
+        document.write("<tr><td>" + (semEspacos==invertida?"Palindromo":"Não eh palindromo") + "</td></tr>");
+        document.write("</table>");
+        
+    }
+        </script>
+
+    <form name="frmDados">
+    Escreva algo: <input type="text" name="string"><br><br>
+    <input type="button" value="Enviar" onclick="verificarPalíndromo();">
+
+    </body>
+</html>

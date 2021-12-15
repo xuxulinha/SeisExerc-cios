@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exercício 6</title> 
+    <script language="javascript">
+  
+      function referenciaBibliografica()
+    {
+        var nome, sobrenome, nomeMeio,nomeMeio2;
+
+        nome= document.frm4.nome.value;
+        nomeMeio= document.frm4.nomeMeio.value;
+        nomeMeio2= document.frm4.nomeMeio2.value;
+        sobrenome= document.frm4.sobrenome.value;
+
+        document.write("<table border='1'>");
+        document.write("<tr><td>" + nome + " " + nomeMeio + " " + sobrenome + " </td></tr>");
+        document.write("<tr><td><b>" + sobrenome.toUpperCase() + "</b>, " 
+                        + nome + nomeMeio.substr(0, 1) + ".  " + 
+                        nomeMeio2.substr(0, 1) + ". </td></tr>");
+        document.write("</table>");
+        
+    }
+   
+
+</script>
+</head>
+<body></body>
+    <form name="frm4">
+    Digite seu nome: <input type="text" name="nome" ><br>
+    Digite o nome do meio: <input type="text" name="nomeMeio" ><br>
+    Digite o outro nome do meio caso tenha: <input type="text" name="nomeMeio2" ><br>
+    Digite o ultimo nome: <input type="text" name="sobrenome" ><br>
+   <input type="button" value="Enviar" onclick="referenciaBibliografica();"> 
+    <br><br>
+    
+  </form>
+
+
+</body>
+</html>

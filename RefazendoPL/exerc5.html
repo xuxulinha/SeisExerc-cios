@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Exercício 5</title>
+    </head>
+    <body>
+
+        <script language="javascript">
+
+function imprimirNome()
+
+    {
+        var nomeOriginal, nomeCatalogo, i, posUltimoNome;
+        nomeOriginal = document.frmDados.string.value;
+
+
+        posUltimoNome = nomeOriginal.lastIndexOf(" ");
+        nomeCatalogo = nomeOriginal.substr(posUltimoNome + 1, nomeOriginal.length - posUltimoNome) + ", " +
+                       nomeOriginal.substr(0, posUltimoNome);
+  
+        document.write("<table border='1'>");
+        document.write("<tr><td>" + nomeOriginal + "</td></tr>");
+        document.write("<tr><td>" + nomeCatalogo + "</td></tr>");
+        document.write("</table>");   
+    }
+        </script>
+
+    <form name="frmDados">
+    Escreva seu nome inteiro: <input type="text" name="string"><br><br>
+    <input type="button" value="Enviar" onclick="imprimirNome();">
+
+    </body>
+</html>

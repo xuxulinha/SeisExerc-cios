@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Exercício2</title>
+    </head>
+    <body>
+
+        <script language="javascript">
+
+function exibirString()
+
+      {
+        var string, número;
+
+        string = document.frmDados.string.value;
+        número = document.frmDados.número.value;
+
+        document.writeln(string.substr(0, número));
+      }
+
+        </script>
+
+    <form name="frmDados">
+    Insira uma palavra: <input type="string" id="string"><br>
+    Insira um número: <input type="number" id="número"><br><br>
+    <input type="button" value="Enviar" onclick="exibirString();">
+
+    </body>
+</html>
